@@ -1,4 +1,4 @@
-package com.oliferov.cryptoapp.adapters
+package com.oliferov.cryptoapp.presentation.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.oliferov.cryptoapp.R
-import com.oliferov.cryptoapp.pojo.CoinPriceInfo
+import com.oliferov.cryptoapp.data.model.CoinPriceInfo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_coin_info.view.*
 

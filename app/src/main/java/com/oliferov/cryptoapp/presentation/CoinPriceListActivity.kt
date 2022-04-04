@@ -1,13 +1,12 @@
-package com.oliferov.cryptoapp
+package com.oliferov.cryptoapp.presentation
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.oliferov.cryptoapp.adapters.CoinInfoAdapter
-import com.oliferov.cryptoapp.pojo.CoinPriceInfo
+import com.oliferov.cryptoapp.R
+import com.oliferov.cryptoapp.presentation.adapters.CoinInfoAdapter
+import com.oliferov.cryptoapp.data.model.CoinPriceInfo
 import kotlinx.android.synthetic.main.activity_coin_price_list.*
 
 class CoinPriceListActivity : AppCompatActivity() {

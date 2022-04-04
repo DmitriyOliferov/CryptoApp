@@ -1,4 +1,4 @@
-package com.oliferov.cryptoapp.api
+package com.oliferov.cryptoapp.data.network
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

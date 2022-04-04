@@ -1,11 +1,11 @@
-package com.oliferov.cryptoapp.pojo
+package com.oliferov.cryptoapp.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
-import com.oliferov.cryptoapp.api.ApiFactory.BASE_IMAGE_URL
+import com.oliferov.cryptoapp.data.network.ApiFactory.BASE_IMAGE_URL
 import com.oliferov.cryptoapp.utils.convertTimestampToTime
 import io.reactivex.annotations.NonNull
 

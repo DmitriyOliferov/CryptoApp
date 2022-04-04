@@ -1,4 +1,4 @@
-package com.oliferov.cryptoapp.pojo
+package com.oliferov.cryptoapp.data.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

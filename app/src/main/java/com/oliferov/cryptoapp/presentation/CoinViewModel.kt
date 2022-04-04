@@ -1,14 +1,14 @@
-package com.oliferov.cryptoapp
+package com.oliferov.cryptoapp.presentation
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.google.gson.Gson
-import com.oliferov.cryptoapp.api.ApiFactory
-import com.oliferov.cryptoapp.database.AppDatabase
-import com.oliferov.cryptoapp.pojo.CoinPriceInfo
-import com.oliferov.cryptoapp.pojo.CoinPriceInfoRawData
+import com.oliferov.cryptoapp.data.network.ApiFactory
+import com.oliferov.cryptoapp.data.database.AppDatabase
+import com.oliferov.cryptoapp.data.model.CoinPriceInfo
+import com.oliferov.cryptoapp.data.model.CoinPriceInfoRawData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit

@@ -1,7 +1,7 @@
-package com.oliferov.cryptoapp.api
+package com.oliferov.cryptoapp.data.network
 
-import com.oliferov.cryptoapp.pojo.CoinInfoListOfData
-import com.oliferov.cryptoapp.pojo.CoinPriceInfoRawData
+import com.oliferov.cryptoapp.data.model.CoinInfoListOfData
+import com.oliferov.cryptoapp.data.model.CoinPriceInfoRawData
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
