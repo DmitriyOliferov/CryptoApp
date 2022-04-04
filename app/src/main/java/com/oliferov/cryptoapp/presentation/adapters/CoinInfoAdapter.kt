@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.oliferov.cryptoapp.R
-import com.oliferov.cryptoapp.data.network.ApiFactory
 import com.oliferov.cryptoapp.domain.CoinInfo
-import com.oliferov.cryptoapp.utils.convertTimestampToTime
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_coin_info.view.*
 
@@ -35,11 +33,11 @@ class CoinInfoAdapter(private val context: Context) :
             with(coin) {
                 val symbolsTemplate = context.resources.getString(R.string.symbols_template)
                 val lastUpdateTemplate = context.resources.getString(R.string.last_update_template)
-                Picasso.get().load(ApiFactory.BASE_IMAGE_URL + imageUrl).into(ivLogoCoin)
+                Picasso.get().load(imageUrl).into(ivLogoCoin)
                 tvSymbols.text = String.format(symbolsTemplate, fromSymbol, toSymbol)
                 tvPrice.text = price.toString()
                 tvLastUpdate.text =
-                    String.format(lastUpdateTemplate, convertTimestampToTime(lastUpdate))
+                    String.format(lastUpdateTemplate, lastUpdate)
                 itemView.setOnClickListener {
                     onCoinClickListener?.onCoinClick(this)
                 }

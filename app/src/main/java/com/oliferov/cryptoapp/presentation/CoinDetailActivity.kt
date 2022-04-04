@@ -7,8 +7,6 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.oliferov.cryptoapp.R
-import com.oliferov.cryptoapp.data.network.ApiFactory
-import com.oliferov.cryptoapp.utils.convertTimestampToTime
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_coin_detail.*
 
@@ -31,10 +29,10 @@ class CoinDetailActivity : AppCompatActivity() {
             tvMinPriceDetail.text = it.lowDay.toString()
             tvMaxPriceDetail.text = it.highDay.toString()
             tvLastMarketDetail.text = it.lastMarket
-            tvLastUpdateDetail.text = convertTimestampToTime(it.lastUpdate)
+            tvLastUpdateDetail.text = it.lastUpdate
             tvFromSymbol.text = it.fromSymbol
             tvToSymbol.text = it.toSymbol
-            Picasso.get().load(ApiFactory.BASE_IMAGE_URL + it.imageUrl).into(imageViewLogo)
+            Picasso.get().load(it.imageUrl).into(imageViewLogo)
         })
     }
 
