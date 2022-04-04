@@ -1,4 +1,4 @@
-package com.oliferov.cryptoapp.data.model
+package com.oliferov.cryptoapp.data.network.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,7 +10,7 @@ import com.oliferov.cryptoapp.utils.convertTimestampToTime
 import io.reactivex.annotations.NonNull
 
 @Entity(tableName = "full_price_list")
-data class CoinPriceInfo (
+data class CoinInfoDto (
     @SerializedName("TYPE")
     @Expose
     val type: String? = null,

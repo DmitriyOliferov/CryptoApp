@@ -1,13 +1,11 @@
-package com.oliferov.cryptoapp.data.model
+package com.oliferov.cryptoapp.data.network.model
 
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
 
-import android.media.Rating
 
-
-data class CoinInfo (
+data class CoinNameDto (
     @SerializedName("Name")
     @Expose
     val name: String? = null,
