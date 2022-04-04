@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.oliferov.cryptoapp.R
-import com.oliferov.cryptoapp.data.network.model.CoinInfoDto
+import com.oliferov.cryptoapp.domain.CoinInfo
 import com.oliferov.cryptoapp.presentation.adapters.CoinInfoAdapter
 import kotlinx.android.synthetic.main.activity_coin_price_list.*
 
@@ -18,7 +18,7 @@ class CoinPriceListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_coin_price_list)
         val adapter = CoinInfoAdapter(this)
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
-            override fun onCoinClick(coinPriceInfo: CoinInfoDto) {
+            override fun onCoinClick(coinPriceInfo: CoinInfo) {
                 startActivity(
                     CoinDetailActivity.newIntent(
                         this@CoinPriceListActivity,
@@ -29,9 +29,9 @@ class CoinPriceListActivity : AppCompatActivity() {
         }
         rvCoinPriceList.adapter = adapter
         viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
-        viewModel.priceList.observe(this, Observer {
+        viewModel.coinInfoList.observe(this) {
             adapter.coinPriceInfoList = it
-        })
+        }
 
     }
 }

@@ -7,7 +7,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import com.oliferov.cryptoapp.data.network.ApiFactory.BASE_IMAGE_URL
 import com.oliferov.cryptoapp.utils.convertTimestampToTime
-import io.reactivex.annotations.NonNull
+
 
 @Entity(tableName = "full_price_list")
 data class CoinInfoDto (
@@ -20,7 +20,6 @@ data class CoinInfoDto (
     val market: String? = null,
 
     @PrimaryKey
-    @NonNull
     @SerializedName("FROMSYMBOL")
     @Expose
     val fromSymbol: String = "",
